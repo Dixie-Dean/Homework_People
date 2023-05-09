@@ -82,8 +82,11 @@ public class Person {
         return builder.toString();
     }
 
-//    @Override
-//    public int hashCode() {
-//        return hashCode();
-//    }
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (surname != null ? surname.hashCode() : 0);
+        return result;
+    }
 }
